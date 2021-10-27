@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.gitubusers.OnCrossClickedAction;
 import com.example.gitubusers.R;
 import com.example.gitubusers.model.User;
 import com.google.android.material.card.MaterialCardView;
@@ -16,12 +17,14 @@ public class ViewHolderFavory extends RecyclerView.ViewHolder {
     private ImageView vhFavAvatar_url;
     private TextView vhFavLogin;
     private TextView vhFavUrl;
+    private ImageView vhDelete;
 
     public ViewHolderFavory(@NonNull View view) {
         super(view);
         vhFavAvatar_url=view.findViewById(R.id.raw_photo_favory);
         vhFavLogin=view.findViewById(R.id.raw_login_favory);
         vhFavUrl=view.findViewById(R.id.raw_url_favory);
+        vhDelete=view.findViewById(R.id.rawBtnDelete);
     }
 
     public ImageView getVhFavAvatar_url() {
@@ -48,12 +51,26 @@ public class ViewHolderFavory extends RecyclerView.ViewHolder {
         this.vhFavUrl = vhFavUrl;
     }
 
-    public void bind(User user){
+    public ImageView getVhDelete() {
+        return vhDelete;
+    }
+
+    public void setVhDelete(ImageView vhDelete) {
+        this.vhDelete = vhDelete;
+    }
+
+    public void bind(User user, OnCrossClickedAction onCrossClickedAction){
         vhFavLogin.setText(user.getLogin());
         vhFavUrl.setText(user.getUrl());
         Glide.with(vhFavAvatar_url.getContext())
                 .load(user.getAvatar_url())
                 .into(vhFavAvatar_url);
+        vhDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onCrossClickedAction.deleteUser(user);
+            }
+        });
 
     }
 }

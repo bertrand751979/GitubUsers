@@ -15,12 +15,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.gitubusers.OnCrossClickedAction;
 import com.example.gitubusers.OnImageClickedAction;
 import com.example.gitubusers.R;
 import com.example.gitubusers.SharedPreferencesManager;
 import com.example.gitubusers.adapter.AdapterFavory;
 import com.example.gitubusers.adapter.AdapterUser;
 import com.example.gitubusers.model.User;
+import com.example.gitubusers.repository.Repository;
 
 import java.util.ArrayList;
 
@@ -42,9 +44,6 @@ public class FavoryFragment extends Fragment {
 
     }
 
-
-
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -54,7 +53,15 @@ public class FavoryFragment extends Fragment {
     }
     private void setViewitem(){
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        adapterFavory =new AdapterFavory(ListFavory);
+        OnCrossClickedAction onCrossClickedAction = new OnCrossClickedAction() {
+            @Override
+            public void deleteUser(User user) {
+                ListFavory= Repository.getInstance().deleteUserToFavorite(FavoryFragment.this.getContext(),user);
+                adapterFavory.setListAdapterFavory(ListFavory);
+                adapterFavory.notifyDataSetChanged();
+            }
+        };
+        adapterFavory =new AdapterFavory(ListFavory,onCrossClickedAction);
         Log.e("La taille des favoris:", String.valueOf(ListFavory.size()));
         recyclerView.setAdapter(adapterFavory);
 

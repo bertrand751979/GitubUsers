@@ -1,4 +1,4 @@
-package com.example.gitubusers;
+package com.example.gitubusers.retrofit;
 
 import com.example.gitubusers.model.User;
 import java.util.List;

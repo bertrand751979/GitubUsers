@@ -51,6 +51,15 @@
             android:text="https://www.hhhklljljlljljljlljljljll.com"
             android:layout_marginLeft="80dp"/>
 
+        <ImageView
+            android:id="@+id/rawBtnDelete"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/ic_baseline_cancel_24"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="360dp"/>
+
+
     </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 

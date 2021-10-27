@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.gitubusers.OnCrossClickedAction;
 import com.example.gitubusers.R;
 import com.example.gitubusers.model.User;
 import com.example.gitubusers.viewHolder.ViewHolderFavory;
@@ -15,9 +16,11 @@ import java.util.ArrayList;
 
 public class AdapterFavory extends RecyclerView.Adapter<ViewHolderFavory> {
     private ArrayList<User>listAdapterFavory;
+    private OnCrossClickedAction onCrossClickedAction;
 
-    public AdapterFavory(ArrayList<User> listAdapterFavory) {
+    public AdapterFavory(ArrayList<User> listAdapterFavory, OnCrossClickedAction onCrossClickedAction) {
         this.listAdapterFavory = listAdapterFavory;
+        this.onCrossClickedAction = onCrossClickedAction;
     }
 
     public void setListAdapterFavory(ArrayList<User> listAdapterFavory) {
@@ -34,7 +37,7 @@ public class AdapterFavory extends RecyclerView.Adapter<ViewHolderFavory> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderFavory holder, int position) {
-        holder.bind(listAdapterFavory.get(position));
+        holder.bind(listAdapterFavory.get(position),onCrossClickedAction);
     }
 
     @Override
