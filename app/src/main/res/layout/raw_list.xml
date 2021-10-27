@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="7dp">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/raw_material_card_user"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="2dp"
+        app:strokeColor="#782B85"
+        app:cardCornerRadius="15dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/rawPhotoUser"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"/>
+
+        <TextView
+            android:id="@+id/rawLoginUser"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="login"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginLeft="80dp"/>
+
+        <TextView
+            android:id="@+id/rawUrlUser"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_700"
+            android:textStyle="normal"
+            android:textSize="10sp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:text="https://www.hkhkhkhkjkkkkkkkkk.com"/>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
+</LinearLayout>
