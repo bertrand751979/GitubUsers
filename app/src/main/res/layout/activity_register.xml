@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F1F1"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:text="Profil"
+        android:textAlignment="center"
+        android:textColor="#04174D"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edit_register_login"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:background="#D56E91"
+        android:hint=" Login: "
+        android:singleLine="true"
+        android:textColorHint="#FCFAFA"
+        android:textSize="16dp" />
+
+    <EditText
+        android:id="@+id/edit_register_mdp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/edit_register_login"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:background="#D56E91"
+        android:hint=" Mot de Passe: "
+        android:singleLine="true"
+        android:textColorHint="#FCFAFA"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/button_register_profil"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_register_mdp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginLeft="110dp"
+        android:text="Enregistrer"
+        android:textColor="#F8F4F4"
+        android:textSize="12sp" />
+
+</RelativeLayout>

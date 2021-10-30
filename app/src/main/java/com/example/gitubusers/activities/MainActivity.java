@@ -17,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
         public static String USER_LIST_KEY = "userKeys";
         public static String USER_LIST_DESCRIPTION = "userDescriptionKeys";
         public static String FAVORITE_LIST_KEY = "favoriteKeys";
+        public static String PROFIL_REGISTER_LIST_KEY = "profilListKey";
+        public static String PROFIL_LIST_EXTRA = "profilListExtra";
+        public static String PROFIL_LIST_KEY= "profilListKey";
 
 
 

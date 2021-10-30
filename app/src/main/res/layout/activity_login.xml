@@ -1,6 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="313dp"
+        android:layout_height="217dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/ic_diploma" />
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="70dp"
+        android:outlineSpotShadowColor="#978A8F"
+        android:text="EXERCICE"
+        android:textAlignment="center"
+        android:textColor="#232B59"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edit_text_user_name"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/titre"
+        android:layout_centerInParent="true"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:ems="10"
+        android:hint=" Login: "
+        android:singleLine="true"
+        android:textColor="#FCFAFA"
+        android:textColorHint="#FCFAFA"
+        android:textSize="16dp" />
+
+    <EditText
+        android:id="@+id/edit_text_user_password"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/edit_text_user_name"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+        android:ems="10"
+        android:hint=" Mot De Passe: "
+        android:singleLine="true"
+        android:textColor="#FCFAFA"
+        android:textColorHint="#FCFAFA"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/button_connexion"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/edit_text_user_password"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:background="@drawable/edit_button"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        android:text="CONNEXION"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/edit_text_user_password"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:background="@drawable/edit_button"
+        android:textSize="21dp"
+        android:textStyle="bold"
+        android:text="CONNEXION"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textview_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_connexion"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:clickable="true"
+        android:fontFamily="sans-serif-light"
+        android:text="Nouveau? Inscrivez vous ici!"
+        android:textColor="#11152C"
+        android:textSize="17dp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

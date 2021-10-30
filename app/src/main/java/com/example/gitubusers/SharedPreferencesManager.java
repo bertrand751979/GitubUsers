@@ -3,6 +3,7 @@ package com.example.gitubusers;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.example.gitubusers.model.Profil;
 import com.example.gitubusers.model.User;
 import com.google.gson.Gson;
 
@@ -44,19 +45,21 @@ public class SharedPreferencesManager {
         sharedPreferences.edit().clear().apply();
     }
 
-    public void saveFavorite(List<User> books, String listKey) {
+    public void saveProfil(List<Profil> books, String listKey) {
         Gson gson = new Gson();
         //gson.tojson qui transforme la liste en chaine de caractere
         String booksAsString = gson.toJson(books);
         save(listKey,booksAsString);
     }
 
-    public List<User> getFavorite(String listKey){
-        List<User> booksList = new ArrayList<>();
+
+
+    public List<Profil> getProfil(String listKey){
+        List<Profil> booksList = new ArrayList<>();
         Gson gson = new Gson();
         User[] books = gson.fromJson(get(listKey), User[].class);
         if (books != null){
-            booksList = Arrays.asList(gson.fromJson(get(listKey), User[].class));
+            booksList = Arrays.asList(gson.fromJson(get(listKey), Profil[].class));
         }
         return  booksList;
     }

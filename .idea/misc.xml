@@ -3,10 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/edit.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/drawable/edit_button.xml" value="0.19791666666666666" />
+        <entry key="app/src/main/res/drawable/ic_baseline_cancel_24.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/drawable/ic_diploma.xml" value="0.13229166666666667" />
+        <entry key="app/src/main/res/drawable/ic_person_black_24dp.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/drawable/ic_profil.xml" value="0.24947916666666667" />
         <entry key="app/src/main/res/drawable/ic_users_list.xml" value="0.13229166666666667" />
+        <entry key="app/src/main/res/drawable/ic_vpn_key_black_24dp.xml" value="0.24947916666666667" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.23333333333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.23333333333333334" />
         <entry key="app/src/main/res/layout/activity_scroll.xml" value="0.22644927536231885" />
         <entry key="app/src/main/res/layout/fragment_favory.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.1503623188405797" />
